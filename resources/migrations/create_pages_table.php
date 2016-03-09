@@ -4,8 +4,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Class CreatePagesTable.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class CreatePagesTable extends Migration
 {
+    /**
+     *
+     */
     public function up()
     {
         Schema::create('pages', function (Blueprint $table) {
@@ -22,6 +30,9 @@ class CreatePagesTable extends Migration
         });
     }
 
+    /**
+     *
+     */
     public function down()
     {
         Schema::drop('pages');

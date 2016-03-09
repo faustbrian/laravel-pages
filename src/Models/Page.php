@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel Pages.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Pages\Models;
 
 use Cviebrock\EloquentSluggable\SluggableInterface;
@@ -10,33 +19,68 @@ use DraperStudio\Parsedown\Facades\Parsedown;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class Page.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class Page extends Model implements SluggableInterface,Taggable
 {
     use SoftDeletes;
     use TaggableTrait;
     use SluggableTrait;
 
+    /**
+     *
+     */
     const TYPE_RAW = 'RAW';
 
+    /**
+     *
+     */
     const TYPE_MARKDOWN = 'MARKDOWN';
 
+    /**
+     *
+     */
     const TYPE_HTML = 'HTML';
 
+    /**
+     *
+     */
     const STATUS_PUBLISHED = 'PUBLISHED';
 
+    /**
+     *
+     */
     const STATUS_DRAFT = 'DRAFT';
 
+    /**
+     * @var array
+     */
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
+    /**
+     * @var array
+     */
     protected $casts = ['meta' => 'array'];
 
+    /**
+     * @var array
+     */
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
+    /**
+     * @var array
+     */
     protected $sluggable = [
         'build_from' => 'title',
         'save_to' => 'slug',
     ];
 
+    /**
+     *
+     */
     public static function boot()
     {
         static::saving(function ($page) {
@@ -47,6 +91,9 @@ class Page extends Model implements SluggableInterface,Taggable
         });
     }
 
+    /**
+     * @return $this
+     */
     public function parse()
     {
         if ($this->type === static::TYPE_MARKDOWN) {
@@ -60,12 +107,18 @@ class Page extends Model implements SluggableInterface,Taggable
         return $this;
     }
 
+    /**
+     *
+     */
     private function parseFromMarkdown()
     {
         $this->title = Parsedown::text($this->title);
         $this->content = Parsedown::text($this->content);
     }
 
+    /**
+     *
+     */
     private function parseFromHtml()
     {
         $this->title = html_entity_decode($this->title);
