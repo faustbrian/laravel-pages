@@ -30,29 +30,14 @@ class Page extends Model implements SluggableInterface,Taggable
     use TaggableTrait;
     use SluggableTrait;
 
-    /**
-     *
-     */
     const TYPE_RAW = 'RAW';
 
-    /**
-     *
-     */
     const TYPE_MARKDOWN = 'MARKDOWN';
 
-    /**
-     *
-     */
     const TYPE_HTML = 'HTML';
 
-    /**
-     *
-     */
     const STATUS_PUBLISHED = 'PUBLISHED';
 
-    /**
-     *
-     */
     const STATUS_DRAFT = 'DRAFT';
 
     /**
@@ -78,9 +63,6 @@ class Page extends Model implements SluggableInterface,Taggable
         'save_to' => 'slug',
     ];
 
-    /**
-     *
-     */
     public static function boot()
     {
         static::saving(function ($page) {
@@ -107,18 +89,12 @@ class Page extends Model implements SluggableInterface,Taggable
         return $this;
     }
 
-    /**
-     *
-     */
     private function parseFromMarkdown()
     {
         $this->title = Parsedown::text($this->title);
         $this->content = Parsedown::text($this->content);
     }
 
-    /**
-     *
-     */
     private function parseFromHtml()
     {
         $this->title = html_entity_decode($this->title);
