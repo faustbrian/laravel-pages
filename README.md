@@ -11,11 +11,7 @@ $ composer require faustbrian/laravel-pages
 Add the service provider to `config/app.php` in the `providers` array.
 
 ``` php
-'providers' => [
-    // ... Illuminate Providers
-    // ... App Providers
-    BrianFaust\Pages\ServiceProvider::class
-];
+BrianFaust\Pages\PagesServiceProvider::class
 ```
 
 ### Migration
@@ -23,7 +19,7 @@ Add the service provider to `config/app.php` in the `providers` array.
 To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="BrianFaust\Package\ServiceProvider"
+$ php artisan vendor:publish --provider="BrianFaust\Package\PagesServiceProvider"
 ```
 
 And then run the migrations to setup the database table.
