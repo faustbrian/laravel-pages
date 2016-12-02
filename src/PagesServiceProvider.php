@@ -11,7 +11,9 @@
 
 namespace BrianFaust\Pages;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class PagesServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
