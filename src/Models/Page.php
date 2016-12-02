@@ -11,11 +11,11 @@
 
 namespace BrianFaust\Pages\Models;
 
-use Cviebrock\EloquentSluggable\SluggableInterface;
-use Cviebrock\EloquentSluggable\SluggableTrait;
+use BrianFaust\Parsedown\Facades\Parsedown;
 use BrianFaust\Taggable\Contracts\Taggable;
 use BrianFaust\Taggable\Traits\Taggable as TaggableTrait;
-use BrianFaust\Parsedown\Facades\Parsedown;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -55,7 +55,7 @@ class Page extends Model implements SluggableInterface,Taggable
      */
     protected $sluggable = [
         'build_from' => 'title',
-        'save_to' => 'slug',
+        'save_to'    => 'slug',
     ];
 
     public static function boot()
