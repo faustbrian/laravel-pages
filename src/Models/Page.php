@@ -30,7 +30,7 @@ use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Page extends Model implements SluggableInterface, Taggable
+class Page extends Model implements SluggableInterface,Taggable
 {
     use SoftDeletes;
     use TaggableTrait;

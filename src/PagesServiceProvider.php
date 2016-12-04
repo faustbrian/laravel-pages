@@ -22,9 +22,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Pages;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class PagesServiceProvider extends ServiceProvider
+class PagesServiceProvider extends AbstractServiceProvider
 {
     /**
      * Bootstrap the application services.
