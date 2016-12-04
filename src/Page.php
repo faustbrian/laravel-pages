@@ -20,7 +20,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Pages\Models;
+namespace BrianFaust\Pages;
 
 use BrianFaust\Parsedown\Facades\Parsedown;
 use BrianFaust\Taggable\Contracts\Taggable;
@@ -30,7 +30,7 @@ use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Page extends Model implements SluggableInterface, Taggable
+class Page extends Model implements SluggableInterface,Taggable
 {
     use SoftDeletes;
     use TaggableTrait;
@@ -69,7 +69,7 @@ class Page extends Model implements SluggableInterface, Taggable
         'save_to'    => 'slug',
     ];
 
-    public static function boot()
+    public static function boot(): void
     {
         static::saving(function ($page) {
             if ($page->type === static::TYPE_HTML) {
@@ -82,7 +82,7 @@ class Page extends Model implements SluggableInterface, Taggable
     /**
      * @return $this
      */
-    public function parse()
+    public function parse(): self
     {
         if ($this->type === static::TYPE_MARKDOWN) {
             $this->parseFromMarkdown();
@@ -95,13 +95,13 @@ class Page extends Model implements SluggableInterface, Taggable
         return $this;
     }
 
-    private function parseFromMarkdown()
+    private function parseFromMarkdown(): void
     {
         $this->title = Parsedown::text($this->title);
         $this->content = Parsedown::text($this->content);
     }
 
-    private function parseFromHtml()
+    private function parseFromHtml(): void
     {
         $this->title = html_entity_decode($this->title);
         $this->content = html_entity_decode($this->content);
