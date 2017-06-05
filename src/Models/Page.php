@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Pages.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Pages;
+namespace BrianFaust\Pages\Models;
 
 use BrianFaust\Parsedown\Facades\Parsedown;
 use BrianFaust\Taggable\Contracts\Taggable;
@@ -58,10 +55,10 @@ class Page extends Model implements SluggableInterface, Taggable
      */
     protected $sluggable = [
         'build_from' => 'title',
-        'save_to'    => 'slug',
+        'save_to' => 'slug',
     ];
 
-    public static function boot(): void
+    public static function boot()
     {
         static::saving(function ($page) {
             if ($page->type === static::TYPE_HTML) {
@@ -87,13 +84,13 @@ class Page extends Model implements SluggableInterface, Taggable
         return $this;
     }
 
-    private function parseFromMarkdown(): void
+    private function parseFromMarkdown()
     {
         $this->title = Parsedown::text($this->title);
         $this->content = Parsedown::text($this->content);
     }
 
-    private function parseFromHtml(): void
+    private function parseFromHtml()
     {
         $this->title = html_entity_decode($this->title);
         $this->content = html_entity_decode($this->content);

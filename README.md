@@ -10,12 +10,6 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require faustbrian/laravel-pages
 ```
 
-Add the service provider to `config/app.php` in the `providers` array.
-
-``` php
-BrianFaust\Pages\PagesServiceProvider::class
-```
-
 ### Migration
 
 To get started, you'll need to publish all vendor assets:
@@ -55,19 +49,11 @@ Page::create([
 $page->parse();
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
