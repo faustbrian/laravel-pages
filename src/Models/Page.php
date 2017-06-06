@@ -55,7 +55,7 @@ class Page extends Model implements SluggableInterface, Taggable
      */
     protected $sluggable = [
         'build_from' => 'title',
-        'save_to' => 'slug',
+        'save_to'    => 'slug',
     ];
 
     public static function boot()
