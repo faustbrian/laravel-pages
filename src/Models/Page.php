@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace BrianFaust\Pages\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use BrianFaust\Parsedown\Facades\Parsedown;
 use BrianFaust\Taggable\Contracts\Taggable;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Cviebrock\EloquentSluggable\SluggableTrait;
-use Cviebrock\EloquentSluggable\SluggableInterface;
 use BrianFaust\Taggable\Traits\Taggable as TaggableTrait;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model implements SluggableInterface, Taggable
 {
