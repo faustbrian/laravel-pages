@@ -1,19 +1,26 @@
 {
     "name": "artisanry/pages",
     "description": "Pages for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-Pages", "Laravel Pages"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "Laravel-Pages",
+        "Laravel Pages"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@basecode.sh",
-        "homepage": "https://basecode.sh"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "cviebrock/eloquent-sluggable": "^4.4",
         "artisanry/taggable": "^1.0",
         "artisanry/parsedown": "^1.0",
-        "illuminate/support": "^5.6"
+        "illuminate/support": "^5.8"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
