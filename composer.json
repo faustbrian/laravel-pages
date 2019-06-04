@@ -1,18 +1,18 @@
 {
-    "name": "faustbrian/laravel-pages",
+    "name": "artisanry/pages",
     "description": "Pages for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-Pages", "Laravel Pages", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Pages", "Laravel Pages"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
         "cviebrock/eloquent-sluggable": "^4.4",
-        "faustbrian/laravel-taggable": "^1.0",
-        "faustbrian/laravel-parsedown": "^1.0",
+        "artisanry/taggable": "^1.0",
+        "artisanry/parsedown": "^1.0",
         "illuminate/support": "^5.6"
     },
     "require-dev": {
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Pages\\": "src/"
+            "Artisanry\\Pages\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Pages\\": "tests"
+            "Artisanry\\Tests\\Pages\\": "tests"
         }
     },
     "config": {
@@ -40,7 +40,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Pages\\PagesServiceProvider"
+                "Artisanry\\Pages\\PagesServiceProvider"
             ]
         }
     },

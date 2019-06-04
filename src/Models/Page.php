@@ -5,17 +5,17 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Pages.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Pages\Models;
+namespace Artisanry\Pages\Models;
 
-use BrianFaust\Parsedown\Facades\Parsedown;
-use BrianFaust\Taggable\Contracts\Taggable;
-use BrianFaust\Taggable\Traits\Taggable as TaggableTrait;
+use Artisanry\Parsedown\Facades\Parsedown;
+use Artisanry\Taggable\Contracts\Taggable;
+use Artisanry\Taggable\Traits\Taggable as TaggableTrait;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;

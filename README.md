@@ -1,16 +1,16 @@
 # Laravel Pages
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Pages/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Pages)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-pages.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Pages.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Pages/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Pages.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Pages)
+[![Build Status](https://img.shields.io/travis/artisanry/Pages/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Pages)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/pages.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Pages.svg?style=flat-square)](https://github.com/artisanry/Pages/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Pages.svg?style=flat-square)](https://packagist.org/packages/artisanry/Pages)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-pages
+$ composer require artisanry/pages
 ```
 
 ### Migration
@@ -18,7 +18,7 @@ $ composer require faustbrian/laravel-pages
 To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="BrianFaust\Package\PagesServiceProvider"
+$ php artisan vendor:publish --provider="Artisanry\Package\PagesServiceProvider"
 ```
 
 And then run the migrations to setup the database table.
@@ -60,7 +60,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -69,4 +69,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)
