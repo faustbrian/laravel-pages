@@ -15,7 +15,7 @@
     }],
     "require": {
         "php": "^7.2",
-        "cviebrock/eloquent-sluggable": "^4.4",
+        "cviebrock/eloquent-sluggable": "^6.0.0",
         "artisanry/taggable": "^1.0",
         "artisanry/parsedown": "^1.0",
         "illuminate/support": "^5.8|^6.0"
